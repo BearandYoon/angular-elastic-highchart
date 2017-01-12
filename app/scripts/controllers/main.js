@@ -32,6 +32,16 @@ angular.module('testApp')
         console.log('count-', response);
         $scope.hits = response.hits.hits;
       });
+
+      OurService.cluster.health(function (err, resp) {
+        if (err) {
+          console.log('cluster-error = ', err);
+            $scope.data = err.message;
+        } else {
+            $scope.data = resp;
+            console.log('cluster = ', resp);
+        }
+      });
     };
 
     $scope.getCurrencyDataFromCurrencylayer();
