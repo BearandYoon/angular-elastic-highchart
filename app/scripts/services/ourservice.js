@@ -18,7 +18,7 @@ angular.module('testApp')
 
     function getData() {
       return esFactory({
-        host: '91.121.142.195:9200',
+        host: 'localhost:9200',
         log: 'trace'
         // _index: "currency_eur"
       });
