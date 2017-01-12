@@ -11,7 +11,7 @@ angular.module('testApp')
   .service('OurService', function ($http, $window, esFactory) {
       return esFactory({
         // host: '91.121.142.195:9200',
-        host: '127.0.0.1:9200',
+        host: 'localhost:9200',
         log: 'trace'
       });
   });
