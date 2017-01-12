@@ -13,14 +13,7 @@ angular.module('testApp')
       var client = OurService.getData();
       console.log(client);
       client.search({
-        index: 'currency_usd',
-        body: {
-          query: {
-            match: {
-              body: 'elasticsearch'
-            }
-          }
-        }
+        index: 'currency_usd'
       }).then(function (resp) {
         console.log(resp);
       }, function (err) {
